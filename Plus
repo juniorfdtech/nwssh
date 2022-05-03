@@ -35,7 +35,7 @@ tput cnorm
 function verif_key () {
 krm=$(echo '5:q-3gs2.o7%8:1'|rev); chmod +x $_Ink/list > /dev/null 2>&1
 [[ ! -e "$_Ink/list" ]] && {
-echo -e "\n\033[1;31mKEY INVÁLIDA!\033[0m"
+echo -e "\n\033[1;31mLINK INVALIDO!\033[0m"
 rm -rf $HOME/Plus > /dev/null 2>&1
 sleep 2
 clear; exit 1
@@ -56,7 +56,7 @@ echo ""
 #-----------------------------------------------------------------------------------------------------------------
 sed -i 's/Port 22222/Port 22/g' /etc/ssh/sshd_config  > /dev/null 2>&1
 service ssh restart  > /dev/null 2>&1
-echo -e "\n\033[1;36mVERIFICANDO LINK... \033[0m" ; rm $_Ink/list > /dev/null 2>&1; wget -P $_Ink https://raw.githubusercontent.com/juniorfdtech/nwssh/main/instalador/list > /dev/null 2>&1
+echo -e "\n\033[1;36mVERIFICANDO LINK... \033[0m" ; rm $_Ink/list > /dev/null 2>&1; wget -P $_Ink https://raw.githubusercontent.com/juniorfdtech/nwssh/main/instalador/list > /dev/null 2>&1; verif_key
 sleep 3s
 echo "/bin/menu" > /bin/h && chmod +x /bin/h > /dev/null 2>&1
 rm versao* > /dev/null 2>&1
